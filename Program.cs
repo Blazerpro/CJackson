@@ -3,16 +3,16 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("What is your name?");
+        Console.WriteLine("Give me a number:");
 
-        var name = Console.ReadLine();
+        var num1 = Console.ReadLine();
 
-        Console.WriteLine("What is your age?");
+        Console.WriteLine("Give me a second number:");
 
-        var age = Console.ReadLine();
+        var num2 = Console.ReadLine();
 
-        var fullstring = $"My name is {name} and age is {age}.";
+        var total = int.Parse(num1) + int.Parse(num2);
 
-        Console.WriteLine(fullstring);
+        Console.WriteLine($"The sum of your numbers is {total}");
     }
 }
