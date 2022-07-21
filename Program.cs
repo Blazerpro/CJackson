@@ -12,10 +12,10 @@ public class Program
 
     private static int ExponentFunc(int initial, int exponent)
     {
-        var answer = initial;
-        for (int i = 1; i < exponent; i++)
+        var answer = 1;
+        for (int i = 0; i < exponent; i++)
         {
-            answer = answer * initial;
+            answer = answer * ((exponent < 0) ? (1 / initial) : (initial));
         }
         return answer;
     }
