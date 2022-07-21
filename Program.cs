@@ -15,17 +15,15 @@ public class Program
 
             int total = 1;
 
-            try
+            if (int.TryParse(num1, out var num1int) == true && int.TryParse(num2, out var num2int) == true)
             {
-                total = int.Parse(num1) + int.Parse(num2);
+                total = num1int + num2int;
+                Console.WriteLine($"The sum of your numbers is {total}");
             }
-            catch
+            else
             {
                 Console.WriteLine("You are an idiot, please try using numbers this time!");
-                continue;
             }
-
-            Console.WriteLine($"The sum of your numbers is {total}");
         }
     }
 }
