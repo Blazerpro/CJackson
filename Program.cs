@@ -15,6 +15,7 @@ public class Program
         var answer = 1;
         for (int i = 0; i < exponent; i++)
         {
+            //              logical expression ? value if true : value if false
             answer = answer * ((exponent < 0) ? (1 / initial) : (initial));
         }
         return answer;
