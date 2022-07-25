@@ -15,14 +15,7 @@ public class Circle
         Radius = radius;
     }
 
-    public double Perimeter()
-    {
-        return Radius * 2 * Math.PI;
-    }
+    public double Perimeter { get => Math.PI * 2 * Radius; }
 
-    public double Area()
-    {
-        return Math.PI * Radius * Radius;
-    }
-
+    public double Area { get => Math.PI * Radius * Radius; }
 }

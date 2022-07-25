@@ -7,7 +7,7 @@ public class Program
         var leCircle = new Circle(4);
 
         Console.WriteLine(leCircle.Radius);
-        Console.WriteLine(leCircle.Area());
-        Console.WriteLine(leCircle.Perimeter());
+        Console.WriteLine(leCircle.Area);
+        Console.WriteLine(leCircle.Perimeter);
     }
 }
