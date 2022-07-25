@@ -1,24 +1,15 @@
-﻿namespace CJackson.Program;
+﻿namespace CJackson;
 public class Program
 {
     public static void Main(string[] args)
     {
-        var firstnum = 4;
-        var exponent = -2;
+        object[] objects = { new Product("iTunes"), 1, "Hi" };
 
-        var answer = ExponentFunc(firstnum, exponent);
-        Console.WriteLine(answer);
-    }
+        object product = new Product("iTunes");
 
-    private static double ExponentFunc(int initial, int exponent)
-    {
-        var answer = 1.0;
-        var counter = Math.Abs(exponent);
-        for (int i = 0; i < counter; i++)
+        for (int i = 0; i < objects.Length; i++)
         {
-            //              logical expression ? value if true : value if false
-            answer = answer * ((exponent < 0) ? (1.0 / initial) : (initial));
+            Console.WriteLine(objects[i].ToString());
         }
-        return answer;
     }
 }
