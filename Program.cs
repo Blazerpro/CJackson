@@ -1,14 +1,13 @@
-﻿using CJackson.Extensions;
-
+﻿using CJackson.Shapes;
 namespace CJackson;
 public class Program
 {
     public static void Main(string[] args)
     {
-        object[] objects = { new Product("iTunes", 1), 1, "Hi" };
+        var leCircle = new Circle(4);
 
-        var iTunes = new Product("iTunes", 1);
-
-        Console.WriteLine(iTunes.Version);
+        Console.WriteLine(leCircle.Radius);
+        Console.WriteLine(leCircle.Area());
+        Console.WriteLine(leCircle.Perimeter());
     }
 }
