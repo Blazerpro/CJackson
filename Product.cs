@@ -12,13 +12,17 @@ public class Product : object
     {
         get
         {
-            return _Version + 1;
+            return _Version;
         }
         private set
         {
             _Version = value;
         }
     }
+
+    public int Version2 { get; set; }
+
+    public double ThreeOverTwo { get => 3.0 / 2; }
 
     public override string ToString()
     {
