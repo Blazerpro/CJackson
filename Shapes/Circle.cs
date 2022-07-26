@@ -6,7 +6,7 @@
 
 namespace CJackson.Shapes;
 
-public class Circle
+public class Circle : IShape
 {
     public double Radius { get; private set; }
 
