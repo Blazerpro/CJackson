@@ -1,20 +1,10 @@
-﻿using CJackson.Shapes;
+﻿using CJackson.Extensions;
+using CJackson.Shapes;
 namespace CJackson;
 public class Program
 {
     public static void Main(string[] args)
     {
-        Goose bird = new Goose();
-
-        IDisposable[] disposables = { bird };
-
-        foreach (var item in disposables)
-        {
-            item.Dispose();
-        }
-
-        bird.Fly();
-
         var shapeArray = new IShape[] { new Circle(5), new Rectangle(4, 3) };
         double total = 0;
 
@@ -23,6 +13,12 @@ public class Program
             total = total + item.Area;
         }
 
-        Console.WriteLine($"The total area of the shapes is: {total}");
+        shapeArray.ForEach(shape => Console.WriteLine(shape.Area));
+
+        var intArr = new List<int> { 1, 2, 5 };
+
+        var newArr = intArr.Transform<int, double>(item => item + 1.0);
+
+        Console.WriteLine(string.Join(", ", newArr));
     }
 }
