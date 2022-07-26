@@ -17,7 +17,10 @@ public class Program
 
         var intArr = new List<int> { 1, 2, 5 };
 
-        var newArr = intArr.Transform<int, double>(item => item + 1.0);
+        var newArr = intArr
+            .Where(item => item > 1)
+            .Select(item => item + 1.0)
+            .ToArray();
 
         Console.WriteLine(string.Join(", ", newArr));
     }

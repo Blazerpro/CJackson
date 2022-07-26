@@ -29,4 +29,19 @@ public static class ArrayExtensions
 
         return newValues;
     }
+
+    public static IEnumerable<T> OurWhere<T>(this IEnumerable<T> col, Func<T, bool> predicate)
+    {
+        List<T> newValues = new();
+
+        foreach (var item in col)
+        {
+            if (predicate(item))
+            {
+                newValues.Add(item);
+            }
+        }
+
+        return newValues;
+    }
 }
