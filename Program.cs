@@ -9,14 +9,14 @@ public class Program
         Console.WriteLine(Counter(pingu));
     }
 
-    public static int Counter(int[] intArr)
+    public static int Counter(IEnumerable<int> intCollection)
     {
         int counter = 0;
-        foreach (var item in intArr)
+        foreach (var item in intCollection)
         {
             if (item % 2 == 0)
             {
-                counter = counter + 1;
+                counter++;
             }
         }
         return counter;
