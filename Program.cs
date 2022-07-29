@@ -5,23 +5,20 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        var shapeArray = new IShape[] { new Circle(5), new Rectangle(4, 3) };
-        double total = 0;
+        var pingu = new int[] { 1, 2, 5, 4, 7, 3, 9, 6 };
+        Console.WriteLine(Counter(pingu));
+    }
 
-        foreach (var item in shapeArray)
+    public static int Counter(int[] intArr)
+    {
+        int counter = 0;
+        foreach (var item in intArr)
         {
-            total = total + item.Area;
+            if (item % 2 == 0)
+            {
+                counter = counter + 1;
+            }
         }
-
-        shapeArray.ForEach(shape => Console.WriteLine(shape.Area));
-
-        var intArr = new List<int> { 1, 2, 5 };
-
-        var newArr = intArr
-            .Where(item => item > 1)
-            .Select(item => item + 1.0)
-            .ToArray();
-
-        Console.WriteLine(string.Join(", ", newArr));
+        return counter;
     }
 }
