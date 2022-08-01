@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicRecommendations", "MusicRecommendations\MusicRecommendations.csproj", "{C2072B95-17C1-40B1-9BCD-0A2261927839}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CJackson", "ConsoleApp\CJackson.csproj", "{EF20E3CF-5C72-46D2-979B-5CDCF8D950F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{EF20E3CF-5C72-46D2-979B-5CDCF8D950F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
