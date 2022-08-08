@@ -127,11 +127,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ListTLP.ColumnCount = 1;
-            this.ListTLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ListTLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.ListTLP.Location = new System.Drawing.Point(3, 63);
             this.ListTLP.Name = "ListTLP";
             this.ListTLP.RowCount = 1;
-            this.ListTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ListTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.ListTLP.Size = new System.Drawing.Size(791, 382);
             this.ListTLP.TabIndex = 1;
             // 
