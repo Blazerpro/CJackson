@@ -32,8 +32,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.TitleBox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.AristOrTrackBox = new System.Windows.Forms.ComboBox();
+            this.ArtistBox = new System.Windows.Forms.TextBox();
+            this.ArtistOrTrackBox = new System.Windows.Forms.ComboBox();
             this.AddButton = new System.Windows.Forms.Button();
             this.ListTLP = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -66,8 +66,8 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel3.Controls.Add(this.TitleBox, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox2, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.AristOrTrackBox, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.ArtistBox, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.ArtistOrTrackBox, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.AddButton, 3, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
@@ -86,27 +86,27 @@
             this.TitleBox.Size = new System.Drawing.Size(372, 23);
             this.TitleBox.TabIndex = 0;
             // 
-            // textBox2
+            // ArtistBox
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(381, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = "Artist";
-            this.textBox2.Size = new System.Drawing.Size(246, 23);
-            this.textBox2.TabIndex = 1;
+            this.ArtistBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ArtistBox.Location = new System.Drawing.Point(381, 15);
+            this.ArtistBox.Name = "ArtistBox";
+            this.ArtistBox.PlaceholderText = "Artist";
+            this.ArtistBox.Size = new System.Drawing.Size(246, 23);
+            this.ArtistBox.TabIndex = 1;
             // 
-            // AristOrTrackBox
+            // ArtistOrTrackBox
             // 
-            this.AristOrTrackBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.AristOrTrackBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.AristOrTrackBox.FormattingEnabled = true;
-            this.AristOrTrackBox.Items.AddRange(new object[] {
+            this.ArtistOrTrackBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ArtistOrTrackBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ArtistOrTrackBox.FormattingEnabled = true;
+            this.ArtistOrTrackBox.Items.AddRange(new object[] {
             "Album",
             "Track"});
-            this.AristOrTrackBox.Location = new System.Drawing.Point(633, 15);
-            this.AristOrTrackBox.Name = "AristOrTrackBox";
-            this.AristOrTrackBox.Size = new System.Drawing.Size(94, 23);
-            this.AristOrTrackBox.TabIndex = 2;
+            this.ArtistOrTrackBox.Location = new System.Drawing.Point(633, 15);
+            this.ArtistOrTrackBox.Name = "ArtistOrTrackBox";
+            this.ArtistOrTrackBox.Size = new System.Drawing.Size(94, 23);
+            this.ArtistOrTrackBox.TabIndex = 2;
             // 
             // AddButton
             // 
@@ -172,8 +172,8 @@
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel3;
         private TextBox TitleBox;
-        private TextBox textBox2;
-        private ComboBox AristOrTrackBox;
+        private TextBox ArtistBox;
+        private ComboBox ArtistOrTrackBox;
         private Button AddButton;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel ListTLP;
