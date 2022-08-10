@@ -11,29 +11,29 @@ namespace MusicRecommendations
         private void AddButton_Click(object sender, EventArgs e)
         {
             var item = CreateItem(TitleBox.Text, ArtistBox.Text, (string)ArtistOrTrackBox.SelectedItem, ListTLP);
-            ListTLP.RowStyles.Insert(ListTLP.RowCount-1, new RowStyle(SizeType.AutoSize));
+            ListTLP.RowStyles.Insert(ListTLP.RowCount - 1, new RowStyle(SizeType.AutoSize));
             ListTLP.RowCount++;
-            ListTLP.Controls.Add(item,0,ListTLP.RowCount-1);
+            ListTLP.Controls.Add(item, 0, ListTLP.RowCount - 1);
         }
 
-        private Control CreateItem(string title, string artist, string albumTrack, TableLayoutPanel tlp)
+        private static Control CreateItem(string title, string artist, string albumTrack, TableLayoutPanel tlp)
         {
             var panel = new TableLayoutPanel();
             panel.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-            panel.RowCount++;
+            panel.RowCount = panel.RowStyles.Count;
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60));
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40));
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100));
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 60));
-            panel.ColumnCount=4;
+            panel.ColumnCount = panel.ColumnStyles.Count;
             panel.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             var titleText = new Label
             {
                 Text = title,
-                Anchor = AnchorStyles.Left|AnchorStyles.Right
+                Anchor = AnchorStyles.Left | AnchorStyles.Right
             };
-            var artistText = new Label 
-            { 
+            var artistText = new Label
+            {
                 Text = artist,
                 Anchor = AnchorStyles.Left | AnchorStyles.Right
             };
@@ -62,7 +62,8 @@ namespace MusicRecommendations
                 tlp.RowCount--;
 
                 // try to shift things up one if they are after the removed control
-                tlp.Controls.Cast<Control>().ToList().ForEach((ctrl) => { 
+                tlp.Controls.Cast<Control>().ToList().ForEach((ctrl) =>
+                {
                     var row = tlp.GetRow(ctrl);
                     if (row > index)
                     {
