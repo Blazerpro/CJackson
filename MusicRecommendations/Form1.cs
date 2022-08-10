@@ -13,7 +13,7 @@ namespace MusicRecommendations
             var item = CreateItem(TitleBox.Text, ArtistBox.Text, (string)ArtistOrTrackBox.SelectedItem, ListTLP);
             ListTLP.RowStyles.Insert(ListTLP.RowCount-1, new RowStyle(SizeType.AutoSize));
             ListTLP.RowCount++;
-            ListTLP.Controls.Add(item,0,ListTLP.RowCount-2);
+            ListTLP.Controls.Add(item,0,ListTLP.RowCount-1);
         }
 
         private Control CreateItem(string title, string artist, string albumTrack, TableLayoutPanel tlp)
@@ -55,16 +55,19 @@ namespace MusicRecommendations
 
             removeButton.Click += (object? _, EventArgs _) =>
             {
-                var index = tlp.Controls.IndexOf(panel);
+                var index = tlp.GetRow(panel);
 
                 tlp.Controls.Remove(panel);
-                tlp.RowStyles.RemoveAt(0);
+                tlp.RowStyles.RemoveAt(index);
                 tlp.RowCount--;
 
-                // try to shift things up one
-                tlp.Controls.Cast<Control>().Skip(index).Select((ctrl, i) => { 
-                    tlp.SetRow(ctrl, i + index -1); 
-                    return 0; 
+                // try to shift things up one if they are after the removed control
+                tlp.Controls.Cast<Control>().ToList().ForEach((ctrl) => { 
+                    var row = tlp.GetRow(ctrl);
+                    if (row > index)
+                    {
+                        tlp.SetRow(ctrl, row - 1);
+                    }
                 });
             };
 
