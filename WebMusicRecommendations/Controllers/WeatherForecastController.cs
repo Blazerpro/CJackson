@@ -30,10 +30,23 @@ public class WeatherForecastController : ControllerBase
         .ToArray();
     }
 
-    [HttpPost("Print/{message}")]
-    public IActionResult Print(string message)
+    [HttpPost("Print")]
+    public IActionResult Print([FromBody] PrintRequest requestJson)
     {
-        Console.WriteLine(message);
+        Console.WriteLine(requestJson.Message + requestJson.Message2);
         return new OkResult();
     }
 }
+
+public class PrintRequest
+{
+    public string Message { get; set; }
+    public string Message2 { get; set; }
+
+    public PrintRequest(string message, string message2)
+    {
+        Message = message;
+        Message2 = message2;
+    }
+}
+
